@@ -1,0 +1,24 @@
+.__gestaltThemedemo_new_component 
+      { margin: 5px; 
+        height: 1em; 
+        background-image: linear-gradient(to bottom, #829f00, #829f00); 
+        background-repeat: repeat-x; 
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffbb450', endColorstr='#fff89406', GradientType=0);
+      }  
+.__gestaltThemedemo_new_component:before 
+      {  
+        height: 1em; 
+        display: block; 
+        content: ''; 
+        float: left; background-image: linear-gradient(to bottom, #0064af, #0064af); 
+        background-repeat: repeat-x; border-radius: 10px 0 0 10px;margin-left: -10px;}
+
+.__gestaltThemedemo_new_component:after 
+      { 
+        height: 1em; 
+        display: block; 
+        content: ''; 
+        float: right; 
+        background-image: linear-gradient(to bottom, #ff4900, #ff4900); 
+        border-radius: 0 10px 10px 0; margin-right: -10px; }
+  

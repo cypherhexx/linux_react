@@ -1,0 +1,166 @@
+// @flow
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import Box from './Box.js';
+import Icon from './Icon.js';
+import Image from './Image.js';
+import Mask from './Mask.js';
+import typography from './Typography.css';
+
+const Square = (props: *) => (
+  <Box {...props} position="relative">
+    <Box
+      dangerouslySetInlineStyle={{ __style: { paddingBottom: '100%' } }}
+      position="relative"
+    />
+    <Box position="absolute" top left bottom right>
+      {props.children}
+    </Box>
+  </Box>
+);
+
+const DefaultAvatar = ({ name }: { name: string }) => {
+  const firstInitial = name ? [...name][0].toUpperCase() : '';
+  return (
+    <Square color="gray" shape="circle">
+      {firstInitial && (
+        <svg
+          width="100%"
+          viewBox="-50 -50 100 100"
+          version="1.1"
+          preserveAspectRatio="xMidYMid meet"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>{name}</title>
+          <text
+            fontSize="50px"
+            fill="#fff"
+            dy="0.35em"
+            textAnchor="middle"
+            className={[
+              typography.antialiased,
+              typography.sansSerif,
+              typography.leadingSmall,
+              typography.fontWeightBold,
+            ].join(' ')}
+          >
+            {firstInitial}
+          </text>
+        </svg>
+      )}
+    </Square>
+  );
+};
+
+type State = {| isImageLoaded: boolean |};
+
+type AvatarProps = {|
+  name: string,
+  outline?: boolean,
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl',
+  src?: string,
+  verified?: boolean,
+  icon?: 'check-circle' | 'pinterest',
+|};
+
+const sizes = {
+  xs: 24,
+  sm: 32,
+  md: 40,
+  lg: 50,
+  xl: 130,
+};
+
+export default class Avatar extends React.PureComponent<AvatarProps, State> {
+  static propTypes = {
+    name: PropTypes.string.isRequired,
+    outline: PropTypes.bool,
+    src: PropTypes.string,
+    size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
+    verified: PropTypes.bool,
+  };
+
+  state = {
+    isImageLoaded: true,
+  };
+
+  handleImageError = () => this.setState({ isImageLoaded: false });
+
+  render() {
+    const {
+      name,
+      outline,
+      size,
+      src,
+      verified,
+      icon = 'check-circle',
+    } = this.props;
+    const { isImageLoaded } = this.state;
+    const width = size ? sizes[size] : '100%';
+    const height = size ? sizes[size] : '';
+
+    return (
+      <Box
+        color="white"
+        {...(outline
+          ? {
+              dangerouslySetInlineStyle: {
+                __style: {
+                  boxShadow: '0 0 0 2px #fff',
+                },
+              },
+            }
+          : {})}
+        width={width}
+        height={height}
+        position="relative"
+        shape="circle"
+      >
+        {src && isImageLoaded ? (
+          <Mask shape="circle" wash>
+            <Image
+              alt={name}
+              color="#EFEFEF"
+              naturalHeight={1}
+              naturalWidth={1}
+              src={src}
+              onError={this.handleImageError}
+            />
+          </Mask>
+        ) : (
+          <DefaultAvatar name={name} />
+        )}
+        {verified && (
+          <Box
+            position="absolute"
+            width="20%"
+            height="20%"
+            minWidth={8}
+            minHeight={8}
+            dangerouslySetInlineStyle={{
+              __style: {
+                bottom: '4%',
+                right: '4%',
+              },
+            }}
+          >
+            <Box
+              color="white"
+              width="100%"
+              height="100%"
+              shape="circle"
+              shadow="md"
+              // dangerouslySetInlineStyle={{
+              //   __style: {
+              //     boxShadow: '0 0 0 1px #fff',
+              //   },
+              //}}
+            >
+              <Icon color="red" icon={icon} accessibilityLabel="" size="100%" />
+            </Box>
+          </Box>
+        )}
+      </Box>
+    );
+  }
+}

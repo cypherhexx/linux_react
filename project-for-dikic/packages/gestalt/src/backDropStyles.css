@@ -1,0 +1,9 @@
+
+@supports not (
+  (backdrop-filter: blur(5px)) and (-webkit-backdrop-filter: blur(5px))
+) {
+  .bluredBg {
+    
+    background-color: rgba(97, 101, 118, 0.15);
+  }
+}

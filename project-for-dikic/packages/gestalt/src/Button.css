@@ -1,0 +1,141 @@
+/* :root {
+  --blue: #4a90e2;
+  --darkGray: #333;
+  --red: #e60023;
+  --lightGray: #efefef;
+  --white: #fff;
+} */
+
+.button {
+  composes: borderBox from "./Layout.css";
+  composes: pill from "./Borders.css";
+}
+
+.solid {
+  composes: noBorder from "./Borders.css";
+}
+
+.enabled {
+  composes: accessibilityOutline from "./Focus.css";
+  composes: pointer from "./Cursor.css";
+}
+
+.sm {
+  composes: small from "./Layout.css";
+  padding: 8px 20px;
+}
+
+.md {
+  composes: medium from "./Layout.css";
+  padding: 10px 22px;
+}
+
+.lg {
+  composes: large from "./Layout.css";
+  padding: 12px 24px;
+}
+
+.block {
+  composes: xsCol12 from "./Column.css";
+  composes: block from "./Layout.css";
+}
+
+.inline {
+  composes: inlineBlock from "./Layout.css";
+}
+
+.disabled {
+  composes: lightGrayBg from "./Colors.css";
+  cursor: default;
+}
+
+.gray {
+  composes: lightGrayBg from "./Colors.css";
+}
+
+.gray:hover,
+.gray:focus {
+  background-color: #EDE1DA;
+}
+
+.gray:active {
+  background-color: #EDE1DA;
+}
+
+.orange {
+  composes: orangeBg from "./Colors.css";
+}
+
+.orange:hover,
+.orange:focus {
+  background-color: #fc4801;
+}
+
+.orange:active {
+  background-color: #fd5a19;
+}
+
+.red {
+  composes: redBg from "./Colors.css";
+}
+
+.red:hover,
+.red:focus {
+  background-color: #DB3615;
+}
+
+.red:active {
+  background-color: #DB3615;
+}
+.green {
+  composes: greenBg from "./Colors.css";
+}
+
+.green:hover,
+.green:focus {
+  background-color: #32703D;
+}
+
+.green:active {
+  background-color: #32703D;
+}
+
+.blue {
+  composes: blueBg from "./Colors.css";
+}
+
+.blue:hover,
+.blue:focus {
+  background-color: #137E93;
+}
+
+.blue:active {
+  background-color: #137E93;
+}
+
+.transparent {
+  composes: transparentBg from "./Colors.css";
+  border: 1px solid #F5F0E3;
+}
+
+.transparent:hover,
+.transparent:focus {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.transparent:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.white {
+  composes: lightGrayBg from "./Colors.css";
+}
+
+.white:hover,
+.white:focus {
+  background-color: #F2E3CB;
+}
+
+.white:active {
+  background-color: #F2E3CB;
+}

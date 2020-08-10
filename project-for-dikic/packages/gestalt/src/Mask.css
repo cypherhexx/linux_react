@@ -1,0 +1,36 @@
+.Mask {
+  composes: overflowHidden from "./Layout.css";
+  composes: relative from "./Layout.css";
+}
+
+.willChangeTransform {
+  /* ⬇ https://github.com/pinterest/gestalt/pull/965 */
+  will-change: transform;
+}
+
+.square {
+  composes: square from "./Borders.css";
+}
+
+.rounded {
+  composes: rounded from "./Borders.css";
+}
+.mdRounded {
+  composes: mdRounded from "./Borders.css";
+}
+.lgRounded {
+  composes: lgRounded from "./Borders.css";
+}
+.circle {
+  composes: circle from "./Borders.css";
+}
+
+.wash {
+  composes: absolute from "./Layout.css";
+  composes: bottom0 from "./Layout.css";
+  composes: left0 from "./Layout.css";
+  composes: right0 from "./Layout.css";
+  composes: top0 from "./Layout.css";
+  background: rgba(0, 0, 0, 0.03);
+  pointer-events: none;
+}

@@ -1,0 +1,248 @@
+:root {
+  /* primary colors */
+  --red: #f13535;      
+  --white: #fff;
+  --whiteSmoke: #F2F4F4; /* F6F8F5  */
+  --lightGray: #EAE6E5; 
+  --gray: #667A85 ;      
+  --darkGray: #29242A;  
+  --blue: #2364AA;     
+  --green: #889D02;     
+   --orange: #fd5a19;
+    /* metal */
+  /* ecarrierflorida@gmail.com Eaglecounter987 */
+   /* secondary colors */
+  --olive: #A08746;
+  --pine: #0a6955;
+  --navy: #004b91;
+  --midnight: #133a5e;
+  --purple: #b469eb;
+  --orchid: #8046a5;
+  --eggplant: #5b2677;
+  --maroon: #6e0f3c;
+  --watermelon: #f13535;
+  --yellow: #F8C765;
+
+  /* transparent colors */
+  --transparentDarkGray: rgba(51, 51, 51, 0.8);
+}
+
+/** PRIMARY COLORS **/
+
+/* red */
+
+.red {
+  color: var(--red);
+}
+
+.redBg {
+  background-color: var(--red);
+}
+
+/* white */
+
+.white {
+  color: var(--white);
+}
+
+.whiteBg {
+  background-color: var(--white);
+}
+
+
+.whiteSmoke {
+  color: var(--whiteSmoke);
+}
+
+.whiteSmokeBg {
+  background-color: var(--whiteSmoke);
+}
+/* lightGray */
+
+.lightGray {
+  color: var(--lightGray);
+}
+
+.lightGrayBg {
+  background-color: var(--lightGray);
+}
+
+/* gray */
+
+.gray {
+  color: var(--gray);
+}
+
+.grayBg {
+  background-color: var(--gray);
+}
+
+/* darkGray */
+
+.darkGray {
+  color: var(--darkGray);
+}
+
+.darkGrayBg {
+  background-color: var(--darkGray);
+}
+
+/** SECONDARY COLORS **/
+
+/* green */
+
+.green {
+  color: var(--green);
+}
+
+.greenBg {
+  background-color: var(--green);
+}
+
+/* pine */
+
+.pine {
+  color: var(--pine);
+}
+
+.pineBg {
+  background-color: var(--pine);
+}
+
+/* olive */
+
+.olive {
+  color: var(--olive);
+}
+
+.oliveBg {
+  background-color: var(--olive);
+}
+/* Overlay */
+
+.overlayBg {
+  background: linear-gradient(to top,rgba(0,0,0,0.4) 0%,transparent 100%);transition: opacity .2s;
+}
+/* blue */
+
+.blue {
+  color: var(--blue);
+}
+
+.blueBg {
+  background-color: var(--blue);
+}
+
+/* yellow */
+
+.yellow {
+  color: var(--yellow);
+}
+
+.yellowBg {
+  background-color: var(--yellow);
+}
+
+/* navy */
+
+.navy {
+  color: var(--navy);
+}
+
+.navyBg {
+  background-color: var(--navy);
+}
+
+/* midnight */
+
+.midnight {
+  color: var(--midnight);
+}
+
+.midnightBg {
+  background-color: var(--midnight);
+}
+
+/* purple */
+
+.purple {
+  color: var(--purple);
+}
+
+.purpleBg {
+  background-color: var(--purple);
+}
+
+/* orchid */
+
+.orchid {
+  color: var(--orchid);
+}
+
+.orchidBg {
+  background-color: var(--orchid);
+}
+
+/* eggplant */
+
+.eggplant {
+  color: var(--eggplant);
+}
+
+.eggplantBg {
+  background-color: var(--eggplant);
+}
+
+/* maroon */
+
+.maroon {
+  color: var(--maroon);
+}
+
+.maroonBg {
+  background-color: var(--maroon);
+}
+
+/* watermelon */
+
+.watermelon {
+  color: var(--watermelon);
+}
+
+.watermelonBg {
+  background-color: var(--watermelon);
+}
+
+/* orange */
+
+.orange {
+  color: var(--orange);
+}
+
+.orangeBg {
+  background-color: var(--orange);
+}
+
+/* transparent */
+
+.transparentBg {
+  background-color: transparent;
+}
+
+.transparentDarkGray {
+  color: var(--transparentDarkGray);
+}
+
+.transparentDarkGrayBg {
+  background-color: var(--transparentDarkGray);
+}
+
+/* light wash */
+
+.lightWashBg {
+  background-color: #e2e2e2;
+}
+
+.darkWashBg {
+  background-color: #dadada;
+}

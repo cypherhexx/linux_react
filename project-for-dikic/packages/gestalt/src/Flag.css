@@ -1,0 +1,10 @@
+.flag {
+    /* fill: currentColor;
+    stroke-width: 0; */
+    vertical-align: middle;
+  }
+  
+  .flagBlock {
+    composes: block from "./Layout.css";
+  }
+  

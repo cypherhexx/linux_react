@@ -1,0 +1,25 @@
+.Badge {
+  composes: antialiased sansSerif letterSpacing from "./Typography.css";
+  composes: fontWeightBold from "./Typography.css";
+  composes: lightGray from "./Colors.css";
+  composes: redBg from "./Colors.css";
+   composes: noBorder from "./Borders.css"; 
+  composes: inlineBlock from "./Layout.css";
+  border-radius: 4px;
+  border-style: solid;
+  /* border-width: 1px; */
+  font-size: 10px;
+   line-height: 1; 
+  margin-top: -4px;
+  padding: 3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.middle {
+  vertical-align: middle;
+}
+
+.top {
+  vertical-align: super;
+}

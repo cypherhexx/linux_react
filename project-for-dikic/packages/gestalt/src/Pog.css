@@ -1,0 +1,93 @@
+:root {
+  --lightGray: #efefef;
+  --gray: #8e8e8e;
+  --darkGray: #333;
+}
+
+.pog {
+  composes: circle from "./Borders.css";
+  composes: flex from "./Layout.css";
+  composes: itemsCenter from "./Layout.css";
+  composes: justifyCenter from "./Layout.css";
+}
+
+.focused {
+  composes: accessibilityOutlineFocus from "./Focus.css";
+}
+
+.transparent {
+  composes: transparentBg from "./Colors.css";
+}
+
+.transparentDarkGray {
+  composes: transparentDarkGrayBg from "./Colors.css";
+}
+
+.transparent.hovered,
+.transparent.focused,
+.white.hovered,
+.white.focused {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.transparent.active,
+.white.active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.transparentDarkGray.hovered,
+.transparentDarkGray.focused {
+  background-color: var(--darkGray);
+}
+
+.transparentDarkGray.active {
+  background-color: var(--darkGray);
+}
+
+.white {
+  composes: whiteBg from "./Colors.css";
+}
+
+.orange {
+  composes: orangeBg from "./Colors.css";
+}
+.green {
+  composes: greenBg from "./Colors.css";
+}
+.blue {
+  composes: blueBg from "./Colors.css";
+}
+.white.hovered,
+.white.focused {
+  background-color: #f0f0f0;
+}
+
+.white.active {
+  background-color: #e5e5e5;
+}
+
+.lightGray {
+  composes: lightGrayBg from "./Colors.css";
+}
+
+.lightGray.hovered,
+.lightGray.focused {
+  background-color: #e2e2e2;
+}
+
+.lightGray.active {
+  background-color: #dadada;
+}
+
+.gray {
+  composes: grayBg from "./Colors.css";
+}
+
+.gray.hovered,
+.gray.focused {
+  background-color: #878787;
+}
+
+.gray.active {
+  background-color: #828282;
+}

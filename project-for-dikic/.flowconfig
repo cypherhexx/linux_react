@@ -1,0 +1,24 @@
+[version]
+0.101.0
+
+[ignore]
+# Tracking https://github.com/facebook/flow/issues/4015
+<PROJECT_ROOT>/docs
+<PROJECT_ROOT>/test
+
+[options]
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
+suppress_comment= \\(.\\|\n\\)*\\$FlowIssue
+# necessary for webpack loader syntax.
+module.name_mapper='^.*\.css$' -> '<PROJECT_ROOT>/flow/stubs/CSSModuleStub.js'
+
+[libs]
+<PROJECT_ROOT>/flow-typed
+
+[lints]
+sketchy-number=error
+untyped-type-import=error
+untyped-import=error
+unclear-type=error
+unsafe-getters-setters=error
+nonstrict-import=error

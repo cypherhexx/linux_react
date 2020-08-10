@@ -1,0 +1,6 @@
+{
+  "sm": "(min-width: 500px)",
+  "md": "(min-width: 768px)",
+  "lg": "(min-width: 1312px)",
+  "xl": "(min-width: 1920px)"
+}

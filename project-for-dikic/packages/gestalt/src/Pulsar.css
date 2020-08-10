@@ -1,0 +1,66 @@
+.innerCircle {
+  composes: borderBox from "./Layout.css";
+  animation-duration: 5s;
+  animation-iteration-count: inherit;
+  animation-name: PulseAnimation;
+  border: 8px solid #4a90e2;
+  border-radius: 50%;
+  height: 100%;
+  opacity: 1;
+  width: 100%;
+}
+
+.innerCircle:focus,
+.innerCircle:hover {
+  border-color: #dce9fa;
+}
+
+.outerCircle {
+  animation-delay: 0.8s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-name: AppearAnimation;
+  opacity: 0;
+}
+
+@keyframes AppearAnimation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes PulseAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  20% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  40% {
+    opacity: 1;
+    transform: scale(0.8);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  80% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
